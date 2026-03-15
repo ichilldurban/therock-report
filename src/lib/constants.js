@@ -1,19 +1,19 @@
 export const COLORS = {
-  primary: '#1a3a5c',
-  accent: '#e8913a',
-  green: '#4a8c6f',
-  blue: '#4a7cb5',
-  rose: '#c4626e',
-  gold: '#d4a020',
-  cream: '#faf8f5',
-  light: '#f7f3ef',
-  border: '#e8e4df',
-  text: '#2c2c2c',
-  muted: '#7a7a7a',
+  primary: '#1B5E3B',
+  accent: '#1B5E3B',
+  green: '#1B5E3B',
+  blue: '#3B7DD8',
+  rose: '#D4495A',
+  gold: '#C4960C',
+  cream: '#FFFFFF',
+  light: '#F5F7FA',
+  border: '#E5E7EB',
+  text: '#1a1a1a',
+  muted: '#6B7280',
 }
 
-export const PIE_COLORS = ['#4a7cb5', '#e8913a', '#4a8c6f', '#c4626e', '#d4a020']
-// Left=blue, Centre=orange, Right=green, Extras=rose, Mothers=gold
+export const PIE_COLORS = ['#3B7DD8', '#1B5E3B', '#6B7280', '#D4495A', '#C4960C']
+// Left=blue, Centre=green, Right=grey, Extras=rose, Mothers=gold
 
 export const ZONE_NAMES = ['Left', 'Centre', 'Right', 'Extras', 'Mothers Rm']
 
@@ -43,8 +43,8 @@ export const EMPTY_TEAMS = {
 
 export const TEAM_SECTIONS = [
   { key: 'platform', title: 'Platform', icon: '🎤', color: COLORS.primary },
-  { key: 'operations', title: 'Operations', icon: '⚙️', color: COLORS.accent },
-  { key: 'frontOfHouse', title: 'Front of House', icon: '👋', color: COLORS.green },
+  { key: 'operations', title: 'Operations', icon: '⚙️', color: '#374151' },
+  { key: 'frontOfHouse', title: 'Front of House', icon: '👋', color: COLORS.blue },
 ]
 
 export const PHOTO_CATEGORIES = [

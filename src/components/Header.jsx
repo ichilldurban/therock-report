@@ -1,37 +1,80 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import { COLORS } from '../lib/constants'
+
+// The Rock Church chevron logo as inline SVG
+function RockLogo({ size = 40 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="30,8 30,20" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" />
+      <polyline points="20,18 30,28 40,18" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <polyline points="20,28 30,38 40,28" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <polyline points="20,38 30,48 40,38" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  )
+}
 
 export default function Header({ title = 'Sunday Service Report', subtitle }) {
   const { user } = useAuth()
 
   return (
     <header style={{
-      background: 'linear-gradient(135deg, #1a3a5c, #2a5a8c)',
-      color: 'white',
+      background: '#FFFFFF',
+      color: COLORS.text,
       textAlign: 'center',
-      padding: '48px 24px 36px',
-      borderRadius: '0 0 36px 36px',
+      padding: '36px 24px 28px',
+      borderBottom: `1px solid ${COLORS.border}`,
       position: 'relative',
-      overflow: 'hidden',
     }}>
-      {/* Decorative circles */}
-      <div style={{ position: 'absolute', top: -50, right: -50, width: 220, height: 220, borderRadius: '50%', background: 'rgba(232,145,58,0.12)' }} />
-      <div style={{ position: 'absolute', bottom: -40, left: -40, width: 160, height: 160, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
-
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', opacity: 0.65, marginBottom: 6 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+        <RockLogo size={44} />
+        <div style={{
+          fontSize: 11,
+          letterSpacing: 4,
+          textTransform: 'uppercase',
+          fontWeight: 700,
+          color: COLORS.text,
+        }}>
           The Rock Church
         </div>
-        <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 32, marginBottom: 6 }}>
-          {title}
-        </h1>
-        {subtitle && (
-          <div style={{ fontSize: 20, opacity: 0.9, fontStyle: 'italic' }}>{subtitle}</div>
-        )}
+        <div style={{
+          fontFamily: "'Caveat', cursive",
+          fontSize: 16,
+          color: COLORS.muted,
+          marginTop: -4,
+        }}>
+          Set free to love
+        </div>
       </div>
 
+      <h1 style={{
+        fontFamily: "'Inter', sans-serif",
+        fontSize: 26,
+        fontWeight: 700,
+        color: COLORS.text,
+        marginTop: 16,
+        marginBottom: 4,
+      }}>
+        {title}
+      </h1>
+      {subtitle && (
+        <div style={{
+          fontFamily: "'Caveat', cursive",
+          fontSize: 22,
+          color: COLORS.muted,
+        }}>
+          {subtitle}
+        </div>
+      )}
+
       {/* Nav links */}
-      <nav style={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', gap: 12, marginTop: 16, flexWrap: 'wrap' }}>
+      <nav style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: 8,
+        marginTop: 18,
+        flexWrap: 'wrap',
+      }}>
         <NavLink to="/">Report</NavLink>
         <NavLink to="/history">History</NavLink>
         {user ? (
@@ -47,17 +90,20 @@ export default function Header({ title = 'Sunday Service Report', subtitle }) {
 function NavLink({ to, children }) {
   return (
     <Link to={to} style={{
-      padding: '6px 18px',
-      borderRadius: 20,
-      background: 'rgba(255,255,255,0.15)',
+      padding: '8px 20px',
+      borderRadius: 8,
+      background: COLORS.primary,
       color: 'white',
       textDecoration: 'none',
       fontSize: 13,
       fontWeight: 600,
-      transition: 'background 0.2s',
+      fontFamily: "'Inter', sans-serif",
+      letterSpacing: 0.5,
+      textTransform: 'uppercase',
+      transition: 'opacity 0.2s',
     }}
-    onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.25)'}
-    onMouseLeave={e => e.target.style.background = 'rgba(255,255,255,0.15)'}
+    onMouseEnter={e => e.target.style.opacity = '0.85'}
+    onMouseLeave={e => e.target.style.opacity = '1'}
     >
       {children}
     </Link>

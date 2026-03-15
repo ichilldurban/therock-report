@@ -44,7 +44,7 @@ export default function Dashboard() {
           </div>
           <button onClick={handleLogout} style={{
             padding: '8px 16px', borderRadius: 10, border: `1.5px solid ${COLORS.border}`,
-            cursor: 'pointer', fontSize: 12, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+            cursor: 'pointer', fontSize: 12, fontWeight: 600, fontFamily: "'Inter', sans-serif",
             background: 'white', color: COLORS.muted,
           }}>
             Sign Out
@@ -60,10 +60,10 @@ export default function Dashboard() {
           cursor: 'pointer',
           fontSize: 16,
           fontWeight: 700,
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           background: COLORS.accent,
           color: 'white',
-          boxShadow: '0 4px 14px rgba(232,145,58,0.3)',
+          boxShadow: '0 4px 14px rgba(27,94,59,0.3)',
           marginBottom: 24,
         }}>
           + Add New Sunday
@@ -91,7 +91,7 @@ export default function Dashboard() {
                   alignItems: 'center',
                 }}>
                   <div>
-                    <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 16, color: COLORS.primary }}>
+                    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 16, color: COLORS.primary }}>
                       {formatDate(s.date)}
                       {s.is_special && <span style={{ marginLeft: 8, fontSize: 11, color: COLORS.gold }}>⭐</span>}
                     </div>
@@ -122,7 +122,7 @@ function smallBtn(color) {
     cursor: 'pointer',
     fontSize: 11,
     fontWeight: 600,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     background: 'white',
     color,
   }

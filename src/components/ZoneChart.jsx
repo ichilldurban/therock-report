@@ -35,7 +35,7 @@ export default function ZoneChart({ services }) {
               cursor: 'pointer',
               fontSize: 12,
               fontWeight: 600,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               background: svc === i ? COLORS.primary : 'transparent',
               color: svc === i ? 'white' : COLORS.muted,
               transition: 'all 0.2s',

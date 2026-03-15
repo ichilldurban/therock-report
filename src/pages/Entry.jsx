@@ -141,7 +141,7 @@ export default function Entry() {
             <CardTitle style={{ marginBottom: 0 }}>Serving Teams</CardTitle>
             <button onClick={handleCopyLastWeek} style={{
               padding: '6px 14px', borderRadius: 8, border: `1px solid ${COLORS.border}`,
-              cursor: 'pointer', fontSize: 11, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+              cursor: 'pointer', fontSize: 11, fontWeight: 600, fontFamily: "'Inter', sans-serif",
               background: COLORS.light, color: COLORS.muted,
             }}>
               📋 Copy Last Week
@@ -169,10 +169,10 @@ export default function Entry() {
           cursor: saving ? 'wait' : 'pointer',
           fontSize: 16,
           fontWeight: 700,
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           background: saved ? COLORS.green : COLORS.primary,
           color: 'white',
-          boxShadow: '0 4px 14px rgba(26,58,92,0.3)',
+          boxShadow: '0 4px 14px rgba(27,94,59,0.3)',
           transition: 'background 0.3s',
           opacity: saving ? 0.7 : 1,
         }}>
@@ -187,7 +187,7 @@ export default function Entry() {
           cursor: 'pointer',
           fontSize: 13,
           fontWeight: 600,
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           background: 'white',
           color: COLORS.muted,
           marginTop: 10,
@@ -219,7 +219,7 @@ function Card({ children, borderColor }) {
 function CardTitle({ children, style = {} }) {
   return (
     <div style={{
-      fontFamily: "'DM Serif Display', serif",
+      fontFamily: "'Inter', sans-serif",
       fontSize: 18,
       fontWeight: 700,
       color: COLORS.primary,
@@ -249,7 +249,7 @@ const inputStyle = {
   border: `1.5px solid ${COLORS.border}`,
   borderRadius: 10,
   fontSize: 14,
-  fontFamily: "'DM Sans', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   outline: 'none',
   background: 'white',
 }
@@ -282,7 +282,7 @@ function CountInputRow({ service, onChange }) {
               borderRadius: 10,
               fontSize: 16,
               fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               textAlign: 'center',
               outline: 'none',
               background: 'white',
@@ -330,7 +330,7 @@ function TeamInputGroup({ title, icon, color, members, onChange }) {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 8,
               fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               outline: 'none',
             }}
             onFocus={e => e.target.style.borderColor = color}
@@ -405,7 +405,7 @@ function PhotoUploader({ label, category, photos, setPhotos, date }) {
           flex: 1, padding: '10px 12px', borderRadius: 10,
           border: `1.5px solid ${COLORS.accent}`,
           background: 'white', cursor: 'pointer',
-          fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+          fontSize: 13, fontWeight: 600, fontFamily: "'Inter', sans-serif",
           color: COLORS.accent,
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
         }}>
@@ -415,7 +415,7 @@ function PhotoUploader({ label, category, photos, setPhotos, date }) {
           flex: 1, padding: '10px 12px', borderRadius: 10,
           border: `1.5px solid ${COLORS.border}`,
           background: 'white', cursor: 'pointer',
-          fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+          fontSize: 13, fontWeight: 600, fontFamily: "'Inter', sans-serif",
           color: COLORS.muted,
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
         }}>

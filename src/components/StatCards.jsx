@@ -32,7 +32,7 @@ export default function StatCards({ services, prevServices }) {
           borderTop: `4px solid ${card.color}`,
         }}>
           <div style={{
-            fontFamily: "'DM Serif Display', serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: 40,
             fontWeight: 700,
             color: card.color,

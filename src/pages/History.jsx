@@ -107,7 +107,7 @@ export default function History() {
                   onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)' }}
                 >
                   <div>
-                    <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 18, color: COLORS.primary, marginBottom: 4 }}>
+                    <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: COLORS.primary, marginBottom: 4 }}>
                       {formatDate(s.date)}
                       {s.is_special && <span style={{ marginLeft: 8, fontSize: 12, color: COLORS.gold }}>⭐ Special</span>}
                     </div>
@@ -119,7 +119,7 @@ export default function History() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{
-                      fontFamily: "'DM Serif Display', serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontSize: 28,
                       fontWeight: 700,
                       color: COLORS.green,

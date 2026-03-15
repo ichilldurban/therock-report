@@ -54,10 +54,10 @@ export default function ShareButton({ sunday }) {
         cursor: 'pointer',
         fontSize: 14,
         fontWeight: 700,
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Inter', sans-serif",
         background: COLORS.green,
         color: 'white',
-        boxShadow: '0 3px 12px rgba(74,140,111,0.3)',
+        boxShadow: '0 3px 12px rgba(27,94,59,0.25)',
       }}>
         📤 Share Report
       </button>
@@ -68,7 +68,7 @@ export default function ShareButton({ sunday }) {
         cursor: 'pointer',
         fontSize: 14,
         fontWeight: 700,
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Inter', sans-serif",
         background: '#25D366',
         color: 'white',
         boxShadow: '0 3px 12px rgba(37,211,102,0.3)',

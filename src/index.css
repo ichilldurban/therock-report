@@ -1,32 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --primary: #1a3a5c;
-  --accent: #e8913a;
-  --green: #4a8c6f;
-  --blue: #4a7cb5;
-  --rose: #c4626e;
-  --gold: #d4a020;
-  --cream: #faf8f5;
-  --light: #f7f3ef;
-  --border: #e8e4df;
-  --text: #2c2c2c;
-  --muted: #7a7a7a;
+  --primary: #1B5E3B;
+  --accent: #1B5E3B;
+  --green: #1B5E3B;
+  --blue: #3B7DD8;
+  --rose: #D4495A;
+  --gold: #C4960C;
+  --cream: #FFFFFF;
+  --light: #F5F7FA;
+  --border: #E5E7EB;
+  --text: #1a1a1a;
+  --muted: #6B7280;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(180deg, var(--cream), #f0ebe5);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #FFFFFF;
   color: var(--text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

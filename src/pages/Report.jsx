@@ -58,7 +58,7 @@ export default function Report() {
               {sundays.map(s => (
                 <button key={s.date} onClick={() => navigate(`/report/${s.date}`)} style={{
                   padding: '10px 22px', borderRadius: 24, border: 'none', cursor: 'pointer',
-                  fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 13, fontWeight: 600, fontFamily: "'Inter', sans-serif",
                   background: 'white', color: COLORS.text,
                   boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                 }}>
@@ -89,11 +89,11 @@ export default function Report() {
                 cursor: 'pointer',
                 fontSize: 13,
                 fontWeight: 600,
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 background: s.date === date ? COLORS.primary : 'white',
                 color: s.date === date ? 'white' : COLORS.text,
                 boxShadow: s.date === date
-                  ? '0 4px 14px rgba(26,58,92,0.3)'
+                  ? '0 4px 14px rgba(27,94,59,0.3)'
                   : '0 2px 8px rgba(0,0,0,0.06)',
                 transition: 'all 0.25s',
               }}

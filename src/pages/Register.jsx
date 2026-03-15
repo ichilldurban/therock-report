@@ -65,7 +65,7 @@ export default function Register() {
               cursor: 'pointer',
               fontSize: 14,
               fontWeight: 600,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               background: COLORS.primary,
               color: 'white',
             }}>
@@ -139,7 +139,7 @@ export default function Register() {
                   border: `1.5px solid ${COLORS.border}`,
                   borderRadius: 10,
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   outline: 'none',
                 }}
                 onFocus={e => e.target.style.borderColor = COLORS.accent}
@@ -163,7 +163,7 @@ export default function Register() {
                   border: `1.5px solid ${COLORS.border}`,
                   borderRadius: 10,
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   outline: 'none',
                 }}
                 onFocus={e => e.target.style.borderColor = COLORS.accent}
@@ -187,7 +187,7 @@ export default function Register() {
                   border: `1.5px solid ${COLORS.border}`,
                   borderRadius: 10,
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   outline: 'none',
                 }}
                 onFocus={e => e.target.style.borderColor = COLORS.accent}
@@ -211,7 +211,7 @@ export default function Register() {
                   border: `1.5px solid ${COLORS.border}`,
                   borderRadius: 10,
                   fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   outline: 'none',
                 }}
                 onFocus={e => e.target.style.borderColor = COLORS.accent}
@@ -227,10 +227,10 @@ export default function Register() {
               cursor: loading ? 'wait' : 'pointer',
               fontSize: 15,
               fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               background: COLORS.accent,
               color: 'white',
-              boxShadow: '0 4px 14px rgba(232,145,58,0.3)',
+              boxShadow: '0 4px 14px rgba(27,94,59,0.3)',
               opacity: loading ? 0.7 : 1,
             }}>
               {loading ? 'Submitting...' : 'Request Access'}
