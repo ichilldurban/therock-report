@@ -343,17 +343,25 @@ function TeamInputGroup({ title, icon, color, members, onChange }) {
 }
 
 function PhotoUploader({ label, category, photos, setPhotos, date }) {
-  const fileRef = useRef()
+  const cameraRef = useRef()
+  const galleryRef = useRef()
   const images = photos[category] || []
+  const [uploading, setUploading] = useState(false)
 
   const handleFiles = async (e) => {
     const files = Array.from(e.target.files)
-    for (let i = 0; i < files.length; i++) {
-      const url = await uploadPhoto(files[i], date, category, images.length + i)
-      setPhotos(prev => ({
-        ...prev,
-        [category]: [...(prev[category] || []), url],
-      }))
+    if (files.length === 0) return
+    setUploading(true)
+    try {
+      for (let i = 0; i < files.length; i++) {
+        const url = await uploadPhoto(files[i], date, category, images.length + i)
+        setPhotos(prev => ({
+          ...prev,
+          [category]: [...(prev[category] || []), url],
+        }))
+      }
+    } finally {
+      setUploading(false)
     }
     e.target.value = ''
   }
@@ -382,15 +390,42 @@ function PhotoUploader({ label, category, photos, setPhotos, date }) {
             }}>✕</button>
           </div>
         ))}
-        <button onClick={() => fileRef.current.click()} style={{
-          width: 80, height: 60, borderRadius: 8,
-          border: `2px dashed ${COLORS.border}`,
-          background: COLORS.light, cursor: 'pointer',
-          fontSize: 22, color: COLORS.muted,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>+</button>
+        {uploading && (
+          <div style={{
+            width: 80, height: 60, borderRadius: 8,
+            border: `2px solid ${COLORS.accent}`,
+            background: COLORS.light,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: 10, color: COLORS.muted, fontWeight: 600,
+          }}>Uploading...</div>
+        )}
       </div>
-      <input ref={fileRef} type="file" accept="image/*" multiple onChange={handleFiles} style={{ display: 'none' }} />
+      <div style={{ display: 'flex', gap: 8 }}>
+        <button onClick={() => cameraRef.current.click()} style={{
+          flex: 1, padding: '10px 12px', borderRadius: 10,
+          border: `1.5px solid ${COLORS.accent}`,
+          background: 'white', cursor: 'pointer',
+          fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+          color: COLORS.accent,
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+        }}>
+          <span style={{ fontSize: 16 }}>📷</span> Take Photo
+        </button>
+        <button onClick={() => galleryRef.current.click()} style={{
+          flex: 1, padding: '10px 12px', borderRadius: 10,
+          border: `1.5px solid ${COLORS.border}`,
+          background: 'white', cursor: 'pointer',
+          fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+          color: COLORS.muted,
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+        }}>
+          <span style={{ fontSize: 16 }}>🖼️</span> Gallery
+        </button>
+      </div>
+      {/* Camera input - opens camera directly on mobile */}
+      <input ref={cameraRef} type="file" accept="image/*" capture="environment" onChange={handleFiles} style={{ display: 'none' }} />
+      {/* Gallery input - opens photo picker, allows multiple selection */}
+      <input ref={galleryRef} type="file" accept="image/*" multiple onChange={handleFiles} style={{ display: 'none' }} />
     </div>
   )
 }

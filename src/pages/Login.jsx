@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import Header from '../components/Header'
 import { COLORS } from '../lib/constants'
@@ -140,6 +140,13 @@ export default function Login() {
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
           </form>
+
+          <p style={{ textAlign: 'center', marginTop: 20, fontSize: 13, color: COLORS.muted }}>
+            Need an account?{' '}
+            <Link to="/admin/register" style={{ color: COLORS.accent, fontWeight: 600, textDecoration: 'none' }}>
+              Request Access
+            </Link>
+          </p>
         </div>
       </div>
     </>

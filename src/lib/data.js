@@ -257,6 +257,23 @@ export async function uploadPhoto(file, date, category, index) {
 
 // ─── AUTH ───
 
+export async function signUp(email, password, name) {
+  if (isDemo) {
+    // Demo mode: simulate registration
+    return { user: { email, user_metadata: { full_name: name } } }
+  }
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: name },
+    },
+  })
+  if (error) throw error
+  return data
+}
+
 export async function signIn(email, password) {
   if (isDemo) {
     // Demo mode: accept any credentials
