@@ -1,15 +1,18 @@
 export const COLORS = {
-  primary: '#1B5E3B',
-  accent: '#1B5E3B',
-  green: '#1B5E3B',
+  primary: '#13451E',
+  accent: '#10552B',
+  green: '#13451E',
+  dark: '#010813',
+  sage: '#678C5C',
   blue: '#3B7DD8',
   rose: '#D4495A',
   gold: '#C4960C',
   cream: '#FFFFFF',
-  light: '#F5F7FA',
-  border: '#E5E7EB',
-  text: '#1a1a1a',
-  muted: '#6B7280',
+  light: '#F0F4F7',
+  border: '#D2D3D5',
+  text: '#010813',
+  muted: '#5A524E',
+  warmGray: '#5A524E',
 }
 
 export const PIE_COLORS = ['#3B7DD8', '#1B5E3B', '#6B7280', '#D4495A', '#C4960C']
