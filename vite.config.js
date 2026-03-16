@@ -16,8 +16,8 @@ export default defineConfig({
         description: 'Sunday service attendance and team report',
         start_url: '/',
         display: 'standalone',
-        background_color: '#F0F4F7',
-        theme_color: '#010813',
+        background_color: '#FFFFFF',
+        theme_color: '#13451E',
         icons: [
           { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
